@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050510">
+  <title>The Real Cost of a Missed Call for a Small Office | Greetro</title>
+  <meta name="description" content="A missed call costs whatever the caller was worth times the odds they never call back. Worked, assumption-by-assumption math for dental, legal, salon, and auto-repair offices — plus the three costs the formula leaves out.">
+  <link rel="canonical" href="https://greetro.com/blog/cost-of-a-missed-call">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://greetro.com/blog/cost-of-a-missed-call">
+  <meta property="og:site_name" content="Greetro">
+  <meta property="og:title" content="The Real Cost of a Missed Call for a Small Office">
+  <meta property="og:description" content="Honest, worked math on what missed calls cost a dental clinic, law firm, salon, or auto shop — from assumptions you can swap for your own numbers.">
+  <meta property="og:image" content="https://greetro.com/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Real Cost of a Missed Call for a Small Office">
+  <meta name="twitter:description" content="Honest, worked math on what missed calls cost a dental clinic, law firm, salon, or auto shop — from assumptions you can swap for your own numbers.">
+  <meta name="twitter:image" content="https://greetro.com/images/og-default.png">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a29bfe'/%3E%3Cstop offset='1' stop-color='%2300f0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='%23070714'/%3E%3Cg stroke='url(%23g)' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='14' y1='27' x2='14' y2='37'/%3E%3Cline x1='26' y1='18' x2='26' y2='46'/%3E%3Cline x1='38' y1='23' x2='38' y2='41'/%3E%3Cline x1='50' y1='28' x2='50' y2='36'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .crumbs{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;font-size:.85rem;color:var(--text-2);padding-top:1.6rem}
+    .crumbs a{color:inherit;text-decoration:none}
+    .crumbs a:hover{color:var(--text)}
+    .crumbs .sep{opacity:.5}
+    .post-hero{max-width:840px;margin-inline:auto;padding-block:clamp(2.2rem,5vh,3.4rem) 0}
+    .post-hero h1{font-size:clamp(1.95rem,4.5vw,2.9rem);line-height:1.16}
+    .post-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.15rem;font-size:.88rem;color:var(--text-3)}
+    .post-body{max-width:840px;margin-inline:auto;padding-block:1.6rem 4rem}
+    .post-body>p{color:var(--text-2);line-height:1.78;margin-top:1rem;font-size:1.02rem}
+    .post-body h2{font-size:clamp(1.35rem,2.6vw,1.7rem);margin:2.7rem 0 .2rem}
+    .post-body h3{font-size:1.13rem;margin:1.9rem 0 .1rem}
+    .post-body ul,.post-body ol{margin:1rem 0 0 1.25rem;display:grid;gap:.5rem;color:var(--text-2);line-height:1.7}
+    .post-body a{color:var(--cyan);text-decoration:none}
+    .post-body a:hover{text-decoration:underline}
+    .post-body strong{color:var(--text)}
+    .answer-box{border:1px solid rgba(162,155,254,.4);background:rgba(162,155,254,.07);border-radius:18px;padding:1.25rem 1.4rem;margin-top:1.7rem}
+    .answer-box p{margin:0;color:var(--text);line-height:1.72}
+    .answer-box p+p{margin-top:.7rem}
+    .formula{font-family:var(--font-display);text-align:center;padding:1.1rem 1.3rem;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03);margin-top:1.4rem;color:var(--text);line-height:1.6}
+    .table-wrap{overflow-x:auto;margin-top:1.4rem;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
+    table.cmp{width:100%;border-collapse:collapse;font-size:.93rem;min-width:640px}
+    table.cmp th,table.cmp td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid var(--border);color:var(--text-2);vertical-align:top;line-height:1.55}
+    table.cmp thead th{color:var(--text);font-family:var(--font-display);background:rgba(255,255,255,.04);white-space:nowrap}
+    table.cmp tbody tr:last-child td{border-bottom:none}
+    table.cmp strong{color:var(--text)}
+    .cta-box{margin-top:2.7rem;padding:1.7rem 1.8rem;border-radius:20px;display:grid;gap:.85rem;justify-items:start}
+    .cta-box h3{margin:0;font-size:1.3rem}
+    .cta-box p{margin:0;color:var(--text-2);line-height:1.65}
+    .cta-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.3rem}
+    .post-faq{margin-top:2.9rem}
+    .post-faq .faq-list{margin-top:1.2rem}
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://greetro.com/blog/cost-of-a-missed-call#article",
+        "headline": "The Real Cost of a Missed Call for a Small Office",
+        "description": "A missed call costs whatever the caller was worth times the odds they never call back. Worked, assumption-by-assumption math for dental, legal, salon, and auto-repair offices.",
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27",
+        "author": { "@type": "Organization", "name": "Greetro", "url": "https://greetro.com/" },
+        "publisher": { "@type": "Organization", "name": "Greetro", "url": "https://greetro.com/" },
+        "image": "https://greetro.com/images/og-default.png",
+        "mainEntityOfPage": "https://greetro.com/blog/cost-of-a-missed-call"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://greetro.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://greetro.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "The Real Cost of a Missed Call for a Small Office", "item": "https://greetro.com/blog/cost-of-a-missed-call" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate what a missed call costs my business?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Multiply four numbers you can estimate from your own records: missed calls per week, the share that were potential new business, the value of a new customer to you, and the share of missed callers who never try again. For example, 10 missed calls a week where 3 were prospects, each worth $500, and half never call back = 3 x 0.5 x $500 = $750 a week." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do missed callers really not call back?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Some do, especially existing customers who know you. But a first-time caller usually found you in a search-results list with your competitors one tap away, so an unanswered ring often just moves them to the next listing. Voicemail only partially helps, because many callers hang up rather than leave a message." }
+          },
+          {
+            "@type": "Question",
+            "name": "When do most missed calls happen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In most small offices they cluster at exactly the times you cannot answer: the lunch rush, when staff are with customers, and evenings and weekends after close. A business open 45 hours a week is unreachable by phone for the other 123 hours unless something answers for it." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cheapest way to stop missing calls?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Voicemail is free but converts poorly. Answering services and virtual receptionists typically cost from about $100 to several hundred dollars a month. An AI receptionist like Greetro starts at $49 a month for true 24/7 coverage, answering within two rings and booking appointments directly into your calendar — usually less than the value of a single saved customer." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Aurora background -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-blob aurora-violet"></div>
+    <div class="aurora-blob aurora-cyan"></div>
+    <div class="aurora-blob aurora-pink"></div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <nav class="nav-inner container" aria-label="Main navigation">
+      <a class="logo" href="/" aria-label="Greetro — home">
+        <svg class="logo-mark" width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#a29bfe"/>
+              <stop offset="1" stop-color="#00f0ff"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="15" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+          <g stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round">
+            <line x1="14" y1="27" x2="14" y2="37"/>
+            <line x1="26" y1="18" x2="26" y2="46"/>
+            <line x1="38" y1="23" x2="38" y2="41"/>
+            <line x1="50" y1="28" x2="50" y2="36"/>
+          </g>
+        </svg>
+        <span class="logo-word">Greetro</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/#features">Features</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/locations/">Locations</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/#waitlist">Start free trial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span>
+        <a href="/blog/">Blog</a><span class="sep">/</span>
+        <span>Cost of a missed call</span>
+      </nav>
+
+      <header class="post-hero reveal">
+        <p class="eyebrow">Worked math</p>
+        <h1>The Real Cost of a Missed Call for a Small Office</h1>
+        <div class="post-meta">
+          <span>By the Greetro team</span>
+          <span>Published <time datetime="2026-08-27">August 27, 2026</time></span>
+          <span>8 min read</span>
+        </div>
+      </header>
+
+      <article class="post-body">
+        <div class="answer-box">
+          <p><strong>The short answer:</strong> a missed call costs whatever the caller was worth, multiplied by the odds they never try you again. You can estimate it from four numbers you already have: missed calls per week &times; the share that were new business &times; the value of a new customer &times; the share who don&rsquo;t call back. Run honestly, that formula lands in the hundreds of dollars per week for most appointment-driven offices &mdash; tens of thousands a year &mdash; which is why phone coverage that costs $49&ndash;$399 a month is usually the easiest ROI decision on the books.</p>
+        </div>
+
+        <p>No scare statistics in this post &mdash; just the formula, four worked examples with every assumption in plain sight, and the three costs the formula leaves out. Swap in your own numbers as you read; the point is the arithmetic, not our inputs.</p>
+
+        <h2>The missed-call formula</h2>
+        <p class="formula">Weekly cost&nbsp;=&nbsp;missed calls/week &times; % new business &times; value of a new customer &times; % lost for good</p>
+        <p>Each input is knowable, at least roughly:</p>
+        <ul>
+          <li><strong>Missed calls per week.</strong> Your phone system or mobile carrier logs these. Count rings that went unanswered and calls that hit voicemail during hours <em>and</em> after close.</li>
+          <li><strong>Share that were new business.</strong> Existing customers redial; first-timers are the fragile ones. If you don&rsquo;t know, listen to a week of voicemails and count.</li>
+          <li><strong>Value of a new customer.</strong> Use first-year revenue, not one ticket, if your customers return.</li>
+          <li><strong>Share lost for good.</strong> A first-time caller usually found you in a search-results list with competitors one tap away. Assume some call back and some don&rsquo;t &mdash; we&rsquo;ll use 50% below, which is deliberately conservative in both directions.</li>
+        </ul>
+
+        <h2>Four worked examples</h2>
+        <p>These are illustrations, not industry statistics &mdash; every input is an assumption you should replace with your own. The arithmetic is the takeaway.</p>
+
+        <h3>Dental clinic</h3>
+        <p><strong>Assume:</strong> 10 missed calls a week, 3 from prospective patients, a new patient worth $900 in first-year treatment (cleanings, x-rays, a filling or two), and half of missed prospects lost. <strong>Math:</strong> 3 &times; 0.5 &times; $900 = <strong>$1,350 a week</strong>, or roughly $65,000&ndash;$70,000 a year. Even if you cut every assumption in half, a practice in a competitive market like <a href="/locations/minneapolis-mn">Minneapolis</a> is still leaving five figures on the table annually.</p>
+
+        <h3>Solo law firm</h3>
+        <p><strong>Assume:</strong> 8 missed calls a week &mdash; legal problems don&rsquo;t keep office hours, so several arrive evenings and weekends &mdash; 2 from potential clients, an average retained matter worth $2,500, and half lost to the next firm in the list. <strong>Math:</strong> 2 &times; 0.5 &times; $2,500 = <strong>$2,500 a week</strong>. For a firm in <a href="/locations/chicago-il">Chicago</a> competing on search ads where a single personal-injury or family-law click can cost real money, missing the call that click generated is paying twice.</p>
+
+        <h3>Salon</h3>
+        <p><strong>Assume:</strong> 12 missed calls a week &mdash; stylists&rsquo; hands are literally full &mdash; 6 of them booking attempts, an average visit worth $65, and half rebooked elsewhere. <strong>Math:</strong> 6 &times; 0.5 &times; $65 = <strong>$195 a week</strong>, about $10,000 a year &mdash; and that counts each caller once, when a salon client who sticks may visit monthly for years. A busy shop in <a href="/locations/tampa-fl">Tampa</a> can lose a chair&rsquo;s worth of revenue to hold music.</p>
+
+        <h3>Auto repair shop</h3>
+        <p><strong>Assume:</strong> 10 missed calls a week with everyone under a lift, 2.5 representing new repair jobs, an average repair order of $450, and half of those callers towing their problem to the next shop. <strong>Math:</strong> 2.5 &times; 0.5 &times; $450 = <strong>$560 a week</strong>, close to $29,000 a year. In a sprawling market like <a href="/locations/dallas-tx">Dallas</a>, the next shop is never far.</p>
+
+        <h2>The examples side by side</h2>
+        <div class="table-wrap">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th scope="col">Office</th>
+                <th scope="col">Assumptions (per week)</th>
+                <th scope="col">Weekly cost</th>
+                <th scope="col">Yearly cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Dental clinic</strong></td>
+                <td>3 new-patient calls missed &middot; $900/patient &middot; 50% lost</td>
+                <td>$1,350</td>
+                <td>~$70,000</td>
+              </tr>
+              <tr>
+                <td><strong>Solo law firm</strong></td>
+                <td>2 potential-client calls missed &middot; $2,500/matter &middot; 50% lost</td>
+                <td>$2,500</td>
+                <td>~$130,000</td>
+              </tr>
+              <tr>
+                <td><strong>Salon</strong></td>
+                <td>6 booking calls missed &middot; $65/visit &middot; 50% lost</td>
+                <td>$195</td>
+                <td>~$10,000</td>
+              </tr>
+              <tr>
+                <td><strong>Auto repair shop</strong></td>
+                <td>2.5 job calls missed &middot; $450/repair order &middot; 50% lost</td>
+                <td>$560</td>
+                <td>~$29,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Are these numbers exactly yours? Almost certainly not. But notice how hard you have to squeeze the assumptions before the answer stops mattering: even the smallest example above pays for 24/7 phone coverage many times over.</p>
+
+        <div class="cta-box glass">
+          <h3>Find out what you&rsquo;re actually missing</h3>
+          <p>Forward your line to Greetro for 14 days &mdash; free, no card &mdash; and read the transcripts of the calls you&rsquo;d have missed. The data settles the argument either way.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="/#waitlist">Start your free trial</a>
+            <a class="btn btn-ghost" href="/#pricing">See pricing</a>
+          </div>
+        </div>
+
+        <h2>Three costs the formula leaves out</h2>
+        <ul>
+          <li><strong>Wasted marketing spend.</strong> If you pay for search ads, a missed call is a paid-for lead thrown away &mdash; you bought the ring, then declined to answer it.</li>
+          <li><strong>Reputation drift.</strong> &ldquo;They never answer&rdquo; shows up in reviews and referrals long before it shows up in revenue. Callers rarely distinguish between <em>busy</em> and <em>indifferent</em>.</li>
+          <li><strong>The interruption tax.</strong> Calls you <em>do</em> answer mid-task have a cost too: a stylist stepping away from a chair or a tech sliding out from under a car trades billable work for phone work. Coverage isn&rsquo;t only about the calls you miss.</li>
+        </ul>
+
+        <h2>Why callers don&rsquo;t call back</h2>
+        <p>Think about how a first-time caller found you: a search for &ldquo;dentist near me&rdquo; or &ldquo;transmission repair,&rdquo; a list of results, your number tapped from that list. When you don&rsquo;t pick up, the list is still open on their screen. The next candidate is one tap away and has no loyalty hurdle to clear, because you haven&rsquo;t earned any yet. Voicemail softens this only slightly &mdash; plenty of callers simply hang up rather than talk to a recording, and even a left message becomes a callback race you may lose to whoever answered live.</p>
+        <p>Existing customers are more forgiving &mdash; they know you and will often text or retry. That&rsquo;s precisely why the formula focuses on <em>new</em> business: the callers with the least patience are the ones worth the most.</p>
+
+        <h2>What to do about it</h2>
+        <p>You have three realistic moves, in ascending order of coverage: train the team to prioritize the phone (free, but physics limits it &mdash; someone is always with a customer), hire or contract answering help (see our honest breakdown of <a href="/blog/answering-service-cost">what answering services cost</a>), or put software on the line. <a href="/#pricing">Greetro</a> answers within two rings 24/7, books straight into your calendar, texts the caller a confirmation, and hands genuinely urgent calls to a human &mdash; starting at $49 a month, which most offices above would earn back with a single saved customer. Whichever route you choose, the worst option is the default one: letting the math above keep running silently in the background.</p>
+
+        <section class="post-faq" aria-label="Frequently asked questions">
+          <h2>Missed-call FAQ</h2>
+          <div class="faq-list">
+            <details class="faq-item glass">
+              <summary>How do I calculate what a missed call costs my business?<span class="faq-chevron" aria-hidden="true"></span></summary>
+              <p>Multiply four numbers from your own records: missed calls per week &times; the share that were potential new business &times; the value of a new customer &times; the share who never try again. Example: 10 missed calls, 3 prospects, $500 value, half lost = $750 a week.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Do missed callers really not call back?<span class="faq-chevron" aria-hidden="true"></span></summary>
+              <p>Some do &mdash; especially existing customers. But first-time callers usually dialed you from a search-results list with competitors one tap away, so an unanswered ring often just moves them down the list. Many hang up rather than leave voicemail.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>When do most missed calls happen?<span class="faq-chevron" aria-hidden="true"></span></summary>
+              <p>At exactly the moments you can&rsquo;t answer: lunch rush, when staff are with customers, and after close. An office open 45 hours a week is phone-unreachable the other 123 unless something answers for it.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>What&rsquo;s the cheapest way to stop missing calls?<span class="faq-chevron" aria-hidden="true"></span></summary>
+              <p>Voicemail is free but converts poorly. Live answering help typically runs $100 to several hundred a month. An AI receptionist like Greetro starts at $49/mo for 24/7 two-ring answering with real appointment booking &mdash; usually less than one saved customer is worth.</p>
+            </details>
+          </div>
+        </section>
+
+        <div class="cta-box glass">
+          <h3>Make the missed-call number zero</h3>
+          <p>Greetro answers every call in two rings, 24/7, in 30+ languages &mdash; and logs each one with a transcript so you can see exactly what it saved. 14 days free, no card required.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="/#waitlist">Join the waitlist</a>
+            <a class="btn btn-ghost" href="/#pricing">Compare plans</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="Greetro — home">
+          <svg class="logo-mark" width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGradFooter" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#a29bfe"/>
+                <stop offset="1" stop-color="#00f0ff"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="15" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+            <g stroke="url(#logoGradFooter)" stroke-width="6" stroke-linecap="round">
+              <line x1="14" y1="27" x2="14" y2="37"/>
+              <line x1="26" y1="18" x2="26" y2="46"/>
+              <line x1="38" y1="23" x2="38" y2="41"/>
+              <line x1="50" y1="28" x2="50" y2="36"/>
+            </g>
+          </svg>
+          <span class="logo-word">Greetro</span>
+        </a>
+        <p class="footer-tag">The AI voice receptionist that answers every call — 24/7, in 30+ languages.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/#features">Features</a>
+        <a href="/#how">How it works</a>
+        <a href="/#use-cases">Who it&rsquo;s for</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/blog/">Blog</a>
+        <a href="/locations/">Locations</a>
+        <a href="/#waitlist">Join the waitlist</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Greetro. All rights reserved.</p>
+      <p>Designed &amp; Built by <a href="https://stylemarking.com" rel="noopener">StyleMarking.com</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
