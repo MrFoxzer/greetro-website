@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050510">
+  <title>Greetro — AI Voice Receptionist That Answers Every Call, 24/7</title>
+  <meta name="description" content="Greetro is a natural-sounding AI phone receptionist for small businesses. It answers within 2 rings, 24/7, in 30+ languages — booking appointments, answering FAQs, texting follow-ups, and logging every call with a transcript and AI summary.">
+  <link rel="canonical" href="https://greetro.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://greetro.com/">
+  <meta property="og:site_name" content="Greetro">
+  <meta property="og:title" content="Greetro — AI Voice Receptionist That Answers Every Call, 24/7">
+  <meta property="og:description" content="A natural-sounding AI receptionist that answers within 2 rings, 24/7, in 30+ languages. Books appointments, answers questions, texts follow-ups, and logs every call.">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Greetro — AI Voice Receptionist That Answers Every Call, 24/7">
+  <meta name="twitter:description" content="A natural-sounding AI receptionist that answers within 2 rings, 24/7, in 30+ languages. Books appointments, answers questions, texts follow-ups, and logs every call.">
+
+  <!-- Favicon: brand waveform mark -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a29bfe'/%3E%3Cstop offset='1' stop-color='%2300f0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='%23070714'/%3E%3Cg stroke='url(%23g)' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='14' y1='27' x2='14' y2='37'/%3E%3Cline x1='26' y1='18' x2='26' y2='46'/%3E%3Cline x1='38' y1='23' x2='38' y2='41'/%3E%3Cline x1='50' y1='28' x2='50' y2='36'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://greetro.com/#organization",
+        "name": "Greetro",
+        "url": "https://greetro.com/",
+        "description": "Greetro builds an AI voice receptionist that answers business calls 24/7 in 30+ languages."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Greetro",
+        "url": "https://greetro.com/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "A natural-sounding AI phone receptionist for small businesses. Answers every call within 2 rings, 24/7, in 30+ languages. Books appointments, answers FAQs, takes messages, sends SMS follow-ups, and logs every call with a transcript and AI summary.",
+        "publisher": { "@id": "https://greetro.com/#organization" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "49",
+            "priceCurrency": "USD",
+            "description": "1 business number, 250 call minutes per month, appointment booking, full transcripts."
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro",
+            "price": "149",
+            "priceCurrency": "USD",
+            "description": "3 business numbers, 1,000 call minutes per month, calendar integrations, 30+ languages, SMS follow-ups."
+          },
+          {
+            "@type": "Offer",
+            "name": "Scale",
+            "price": "399",
+            "priceCurrency": "USD",
+            "description": "10 business numbers, 4,000 call minutes per month, CRM integrations and API, priority support."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Aurora background -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora-blob aurora-violet"></div>
+    <div class="aurora-blob aurora-cyan"></div>
+    <div class="aurora-blob aurora-pink"></div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <nav class="nav-inner container" aria-label="Main navigation">
+      <a class="logo" href="#top" aria-label="Greetro — home">
+        <svg class="logo-mark" width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#a29bfe"/>
+              <stop offset="1" stop-color="#00f0ff"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="15" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+          <g stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round">
+            <line x1="14" y1="27" x2="14" y2="37"/>
+            <line x1="26" y1="18" x2="26" y2="46"/>
+            <line x1="38" y1="23" x2="38" y2="41"/>
+            <line x1="50" y1="28" x2="50" y2="36"/>
+          </g>
+        </svg>
+        <span class="logo-word">Greetro</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#use-cases">Who it&rsquo;s for</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="#waitlist">Start free trial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.2c.6-.6 1.6-.5 2.1.2l1.6 2.3c.4.6.4 1.4-.1 2L9 9.1c1 2.1 2.7 3.8 4.8 4.8l1.4-1.2c.6-.5 1.4-.5 2-.1l2.3 1.6c.7.5.8 1.5.2 2.1l-1.4 1.4c-.7.7-1.7 1-2.6.8C9.6 17.1 5.7 13.2 4.4 7.1c-.2-.9.1-1.9.8-2.6l1.4-1.3Z" fill="currentColor"/></svg>
+          AI Voice Receptionist
+        </p>
+        <h1 class="reveal delay-1">Every call answered.<br><span class="grad-text">Every time.</span></h1>
+        <p class="hero-sub reveal delay-2">Greetro is a natural-sounding AI receptionist that picks up within two rings — day, night, weekends, holidays — in 30+ languages. It books appointments, answers questions, texts follow-ups, and hands off urgent calls to a human. You just see the bookings appear.</p>
+        <div class="hero-ctas reveal delay-3">
+          <a class="btn btn-primary" href="#waitlist">Start your 14-day free trial</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <ul class="hero-facts reveal delay-4">
+          <li><strong>2 rings</strong><span>pickup, every call</span></li>
+          <li><strong>24/7/365</strong><span>always on</span></li>
+          <li><strong>30+</strong><span>languages</span></li>
+        </ul>
+      </div>
+
+      <!-- Animated phone mockup -->
+      <div class="hero-visual reveal delay-2">
+        <div class="phone glass" role="img" aria-label="Simulated Greetro call: a caller asks to book a Thursday appointment and Greetro books it, syncs the calendar, and texts a confirmation.">
+          <div class="phone-top" aria-hidden="true">
+            <span class="live-dot"></span>
+            <span class="phone-status">Live call &middot; answered in 2 rings</span>
+            <span class="phone-timer">00:41</span>
+          </div>
+
+          <div class="waveform" aria-hidden="true">
+            <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span>
+            <span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span>
+            <span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span>
+            <span style="--i:12"></span><span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span>
+            <span style="--i:16"></span><span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span>
+            <span style="--i:20"></span><span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span>
+          </div>
+
+          <div class="transcript" aria-hidden="true">
+            <div class="msg msg-caller"><span class="msg-who">Caller</span>Hi — could I book a cleaning some time Thursday afternoon?</div>
+            <div class="msg msg-ai"><span class="msg-who">Greetro</span>Of course. Thursday we have 2:30 or 4:00 open — which suits you better?</div>
+            <div class="msg msg-caller"><span class="msg-who">Caller</span>2:30 works.</div>
+            <div class="msg msg-ai"><span class="msg-who">Greetro</span>Done — you&rsquo;re booked for Thursday at 2:30. I&rsquo;ve just texted you the confirmation.</div>
+          </div>
+
+          <div class="call-outcome" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Appointment booked &middot; calendar synced &middot; SMS sent
+          </div>
+        </div>
+
+        <div class="float-chip float-chip-1 glass" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 2.5V6M16 2.5V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          New booking &middot; Thu 2:30 PM
+        </div>
+        <div class="float-chip float-chip-2 glass" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          Confirmation texted
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PAIN STRIP ===================== -->
+    <section class="pain container reveal">
+      <div class="pain-card glass">
+        <p><span class="grad-text">Most missed callers never call back.</span> They call the next business on the list. Greetro makes sure the next business is never the one that picks up instead of you.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES (BENTO) ===================== -->
+    <section class="section container" id="features">
+      <div class="section-head reveal">
+        <p class="eyebrow">Features</p>
+        <h2>A full front desk, <span class="grad-text">minus the desk</span></h2>
+        <p class="section-sub">Everything a great receptionist does — answering, booking, messaging, triaging — running around the clock for every location you have.</p>
+      </div>
+
+      <div class="bento">
+        <article class="bento-cell span-4 glass reveal">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Answered in two rings, around the clock</h3>
+          <p>Lunch rush, 2 a.m., public holidays — Greetro picks up every single call within two rings, greets callers by your business name, and sounds like a calm, friendly member of your team.</p>
+          <div class="mini-wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal delay-1">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>30+ languages, native fluency</h3>
+          <p>Greetro detects the caller&rsquo;s language and switches instantly — so every caller is served in the language they opened with.</p>
+          <div class="lang-chips" aria-hidden="true"><span>EN</span><span>ES</span><span>FR</span><span>DE</span><span>PT</span><span>AR</span><span>ZH</span><span>+</span></div>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M8 2.5V6M16 2.5V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m9 14.5 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Books straight into your calendar</h3>
+          <p>Two-way sync with Google and Outlook calendars. Greetro offers only genuinely free slots, books, reschedules, and cancels — no double bookings, no back-and-forth.</p>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal delay-1">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19a2 2 0 0 0 2 2h14M8 8h8M8 12h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Answers from your knowledge base</h3>
+          <p>Train it on your services, prices, hours, directions, and policies. Greetro answers accurately — and says &ldquo;I&rsquo;ll have someone confirm that&rdquo; instead of guessing.</p>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal delay-2">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Texts callers follow-up links</h3>
+          <p>Booking confirmations, intake forms, directions, payment links — sent by SMS while the caller is still on the line.</p>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M12 3l-4 4m4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="rotate(90 12 12)"/><circle cx="5" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8"/><circle cx="19" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>Knows when to hand off</h3>
+          <p>Genuinely urgent call? Greetro transfers it to your on-call number immediately, with a one-line summary whispered before it connects.</p>
+        </article>
+
+        <article class="bento-cell span-2 glass reveal delay-1">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h6M7 14h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Structured messages, not sticky notes</h3>
+          <p>When there&rsquo;s nothing to book, Greetro captures name, number, reason, and urgency as a clean, structured message — never a garbled voicemail.</p>
+        </article>
+
+        <article class="bento-cell span-4 glass reveal delay-2">
+          <div class="cell-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 14.5 10 11l2.5 2.5L17 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Every call logged, transcribed, and summarized</h3>
+          <p>Your dashboard shows every call with a full transcript and a two-line AI summary: who called, what they wanted, what happened. Skim your whole day&rsquo;s phone traffic in under a minute.</p>
+          <div class="log-rows" aria-hidden="true">
+            <div class="log-row"><span class="log-badge log-booked">Booked</span><span>Cleaning &middot; Thu 2:30 PM &middot; confirmation sent</span></div>
+            <div class="log-row"><span class="log-badge log-msg">Message</span><span>Quote request &middot; kitchen remodel &middot; callback before 5</span></div>
+            <div class="log-row"><span class="log-badge log-urgent">Transferred</span><span>Urgent &middot; burst pipe &middot; routed to on-call line</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section container" id="how">
+      <div class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>Live in an afternoon, <span class="grad-text">not a quarter</span></h2>
+        <p class="section-sub">No hardware, no new phone system, no IT project. Three steps and Greetro is answering.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step glass reveal">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Connect your number</h3>
+          <p>Keep the number your customers already know — forward calls to Greetro in one setting — or spin up a new local number in minutes.</p>
+        </div>
+        <div class="step glass reveal delay-1">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Teach it your business</h3>
+          <p>Point Greetro at your website and connect your Google or Outlook calendar. Review its answers, set your handoff rules, and approve the greeting.</p>
+        </div>
+        <div class="step glass reveal delay-2">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Let it answer</h3>
+          <p>Greetro books, reschedules, answers, texts, and transfers — while every call lands in your dashboard with a transcript and summary.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== USE CASES ===================== -->
+    <section class="section container" id="use-cases">
+      <div class="section-head reveal">
+        <p class="eyebrow">Who it&rsquo;s for</p>
+        <h2>Built for businesses that <span class="grad-text">live on the phone</span></h2>
+        <p class="section-sub">If a missed call is a missed customer, Greetro pays for itself with the first booking it saves.</p>
+      </div>
+
+      <div class="use-cases">
+        <div class="use-case glass reveal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c-4.4-2.4-7.5-5.6-7.5-10A4.5 4.5 0 0 1 12 7.6 4.5 4.5 0 0 1 19.5 11c0 4.4-3.1 7.6-7.5 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v5m-2.5-2.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Dental &amp; medical clinics</h3>
+          <p>Fill the schedule, cut no-shows with SMS confirmations, and route true emergencies to the on-call line.</p>
+        </div>
+        <div class="use-case glass reveal delay-1">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 7l7-4 7 4M4 21h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7v6a3 3 0 0 1-6 0V7h6ZM23 7v6a3 3 0 0 1-6 0V7h6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" transform="scale(0.9) translate(1.3 1)"/></svg>
+          <h3>Law firms</h3>
+          <p>Capture every potential client with a structured intake — matter type, urgency, callback window — before they ring the next firm.</p>
+        </div>
+        <div class="use-case glass reveal delay-2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4c3 3.2 3 8-1 10.5C10 16 14 15.5 16.5 12 20 7 15 2.5 8 4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 21c2-2.5 5-3.5 8.5-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Salons &amp; spas</h3>
+          <p>Book and reschedule while stylists stay with clients — no more choosing between the chair and the phone.</p>
+        </div>
+        <div class="use-case glass reveal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 1 5 5L9 22l-5 1 1-5L15.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="scale(0.85) translate(2 0)"/><path d="m15 5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Trades &amp; contractors</h3>
+          <p>Answer from the roof, the job site, or the road. Urgent leaks get transferred; everything else gets booked.</p>
+        </div>
+        <div class="use-case glass reveal delay-1">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11 12 4l9 7M5.5 9.5V20h13V9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5h4v5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <h3>Real-estate offices</h3>
+          <p>Every listing inquiry answered on the first ring, viewings booked straight into agents&rsquo; calendars.</p>
+        </div>
+        <div class="use-case glass reveal delay-2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 20c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 8.5h5M16 12h5M18.5 15.5H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Agencies &amp; studios</h3>
+          <p>Look bigger than you are: a polished receptionist for every client line, without hiring one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="section container" id="pricing">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>Less than a day of a <span class="grad-text">receptionist&rsquo;s salary</span></h2>
+        <p class="section-sub">Simple monthly plans in USD. Start free for 14 days — no card required.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price-card glass reveal">
+          <h3>Starter</h3>
+          <p class="price"><span class="price-num">$49</span><span class="price-per">/mo</span></p>
+          <p class="price-tag">For a single line that can&rsquo;t miss calls.</p>
+          <ul class="price-features">
+            <li>1 business number</li>
+            <li>250 call minutes / month</li>
+            <li>24/7 answering within 2 rings</li>
+            <li>Appointment booking</li>
+            <li>Full transcripts &amp; AI summaries</li>
+            <li>Email support</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="#waitlist">Start free trial</a>
+        </article>
+
+        <article class="price-card price-featured glass reveal delay-1">
+          <p class="popular-badge">Most popular</p>
+          <h3>Pro</h3>
+          <p class="price"><span class="price-num">$149</span><span class="price-per">/mo</span></p>
+          <p class="price-tag">For busy offices and multi-line teams.</p>
+          <ul class="price-features">
+            <li>3 business numbers</li>
+            <li>1,000 call minutes / month</li>
+            <li>Google &amp; Outlook calendar sync</li>
+            <li>30+ languages</li>
+            <li>SMS follow-up links</li>
+            <li>Everything in Starter</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="#waitlist">Start free trial</a>
+        </article>
+
+        <article class="price-card glass reveal delay-2">
+          <h3>Scale</h3>
+          <p class="price"><span class="price-num">$399</span><span class="price-per">/mo</span></p>
+          <p class="price-tag">For multi-location businesses and franchises.</p>
+          <ul class="price-features">
+            <li>10 business numbers</li>
+            <li>4,000 call minutes / month</li>
+            <li>CRM integrations + API</li>
+            <li>Priority support</li>
+            <li>Everything in Pro</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="#waitlist">Start free trial</a>
+        </article>
+      </div>
+
+      <p class="pricing-note reveal">14-day free trial on every plan &middot; no card required &middot; cancel anytime</p>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section container section-narrow" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, <span class="grad-text">answered</span></h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item glass">
+          <summary>How natural does Greetro actually sound?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>Greetro uses modern neural voices with natural pacing, pauses, and interruption handling — callers can talk over it, change their mind mid-sentence, or ask something unexpected, and it keeps up. It always identifies itself honestly as an automated assistant if a caller asks.</p>
+        </details>
+        <details class="faq-item glass">
+          <summary>What happens when a caller really needs a human?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>You define what counts as urgent — a medical emergency, a burst pipe, a caller who simply insists. Greetro transfers those calls to your on-call number immediately and whispers a one-line summary to whoever picks up. Everything else becomes a booking or a structured message.</p>
+        </details>
+        <details class="faq-item glass">
+          <summary>Do I have to change my phone number?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>No. Keep your existing number and forward calls to Greetro — always, only when busy, or only after hours. You can also add a fresh local number if you prefer. Turning forwarding off returns everything to exactly how it was.</p>
+        </details>
+        <details class="faq-item glass">
+          <summary>Which calendars and tools does it work with?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>Greetro syncs two-way with Google Calendar and Outlook on the Pro and Scale plans, so it only ever offers genuinely open slots. The Scale plan adds CRM integrations and an API for pushing call outcomes into the systems you already run.</p>
+        </details>
+        <details class="faq-item glass">
+          <summary>What languages does Greetro speak?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>30+ languages, including English, Spanish, French, German, Portuguese, Italian, Dutch, Arabic, Hindi, and Mandarin. It detects the caller&rsquo;s language automatically and answers in kind — one receptionist for every caller you serve.</p>
+        </details>
+        <details class="faq-item glass">
+          <summary>How does the free trial work, and what about my data?<span class="faq-chevron" aria-hidden="true"></span></summary>
+          <p>Every plan starts with 14 days free, no card required — if you do nothing, nothing is charged. Calls and transcripts are encrypted in transit and at rest, your data is never sold or used to train models for other businesses, and you can export or delete it at any time.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA + WAITLIST ===================== -->
+    <section class="section container" id="waitlist">
+      <div class="cta-panel glass reveal">
+        <div class="cta-copy">
+          <h2>Stop paying for<br><span class="grad-text">missed calls</span></h2>
+          <p>Join the waitlist and be first in line when your region opens. Every early business gets hands-on onboarding and a 14-day free trial — no card required.</p>
+          <ul class="cta-trust">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Calls encrypted in transit and at rest
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Your data is never sold, and never trains other businesses&rsquo; bots
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Export or delete your call data anytime
+            </li>
+          </ul>
+        </div>
+
+        <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="waitlist">
+          <p class="hp-field" aria-hidden="true">
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+          <div class="form-field">
+            <label for="wl-name">Name</label>
+            <input type="text" id="wl-name" name="name" required autocomplete="name" placeholder="Alex Rivera">
+          </div>
+          <div class="form-field">
+            <label for="wl-email">Work email</label>
+            <input type="email" id="wl-email" name="email" required autocomplete="email" placeholder="alex@yourbusiness.com">
+          </div>
+          <div class="form-field">
+            <label for="wl-biz">Business type</label>
+            <input type="text" id="wl-biz" name="business-type" required placeholder="e.g. dental clinic, law firm, salon">
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Join the waitlist</button>
+          <p class="form-note">We&rsquo;ll only email you about Greetro. No spam, ever.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="Greetro — back to top">
+          <svg class="logo-mark" width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGradFooter" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#a29bfe"/>
+                <stop offset="1" stop-color="#00f0ff"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="15" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+            <g stroke="url(#logoGradFooter)" stroke-width="6" stroke-linecap="round">
+              <line x1="14" y1="27" x2="14" y2="37"/>
+              <line x1="26" y1="18" x2="26" y2="46"/>
+              <line x1="38" y1="23" x2="38" y2="41"/>
+              <line x1="50" y1="28" x2="50" y2="36"/>
+            </g>
+          </svg>
+          <span class="logo-word">Greetro</span>
+        </a>
+        <p class="footer-tag">The AI voice receptionist that answers every call — 24/7, in 30+ languages.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#use-cases">Who it&rsquo;s for</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist">Join the waitlist</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Greetro. All rights reserved.</p>
+      <p>Designed &amp; Built by <a href="https://stylemarking.com" rel="noopener">StyleMarking.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
