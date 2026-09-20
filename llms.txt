@@ -2,7 +2,7 @@
 
 > Greetro is an AI voice receptionist for small businesses. It answers every call within two rings, 24/7/365, in 30+ languages, sounding like a calm human receptionist. It books appointments with two-way Google and Outlook calendar sync, answers questions from a business-specific knowledge base, takes structured messages, sends SMS follow-up links, transfers genuinely urgent calls to a human on-call number, and logs every call with a full transcript and a two-line AI summary. It works with a business's existing phone number via call forwarding — no new hardware or phone system.
 
-Pricing (USD, monthly; every plan starts with a 14-day free trial, no card required):
+Planned pricing at launch (USD, monthly). Greetro is pre-launch: there is no signup, no checkout and no free trial, and these prices are not yet final:
 - Starter — $49/mo: 1 business number, 250 call minutes, 24/7 answering, appointment booking, transcripts and AI summaries.
 - Pro — $149/mo: 3 business numbers, 1,000 call minutes, Google and Outlook calendar sync, 30+ languages, SMS follow-ups.
 - Scale — $399/mo: 10 business numbers, 4,000 call minutes, CRM integrations and API, priority support.
@@ -11,13 +11,22 @@ Typical customers: dental and medical clinics, law firms, salons and spas, trade
 
 ## Key pages
 
-- [Home — features, how it works, pricing, FAQ](https://greetro.com/)
+- [Home — features, how it works, planned pricing, FAQ](https://greetro.com/)
 - [Blog](https://greetro.com/blog/)
 - [How Much Does an Answering Service Cost in 2026?](https://greetro.com/blog/answering-service-cost)
 - [The Real Cost of a Missed Call for a Small Office](https://greetro.com/blog/cost-of-a-missed-call)
 - [AI Receptionist vs. Human Receptionist vs. Voicemail](https://greetro.com/blog/ai-receptionist-vs-human-receptionist-vs-voicemail)
 - [Service areas — all 50 US states and major cities](https://greetro.com/locations/)
+- [Privacy policy](https://greetro.com/privacy)
+- [Terms of use](https://greetro.com/terms)
+
+## Status
+
+Greetro has not launched. There is no product to sign up for, no account system, no checkout and no free trial. The website's only function is a waitlist form (name, work email, business type). Prices shown are planned launch pricing and may change.
 
 ## Contact
 
-- Join the waitlist / start a free trial: https://greetro.com/#waitlist (form on the homepage; Greetro is onboarding early businesses region by region)
+- Join the waitlist: https://greetro.com/#waitlist (form on the homepage; Greetro is onboarding early businesses region by region)
+- Email: leads@stylemarking.com
+- [Privacy policy](https://greetro.com/privacy)
+- [Terms of use](https://greetro.com/terms)

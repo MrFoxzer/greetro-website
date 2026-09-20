@@ -37,6 +37,7 @@ TODAY = "2026-08-26"
 # Blog pages (authored by hand in blog/, not generated here) — listed so the
 # sitemap stays complete and regenerable from this one script.
 BLOG_LASTMOD = "2026-08-27"
+LEGAL_LASTMOD = "2026-09-19"
 BLOG_SLUGS = [
     "answering-service-cost",
     "cost-of-a-missed-call",
@@ -375,10 +376,10 @@ TITLE_CONCEPTS = ["AI Receptionist", "AI Phone Receptionist",
                   "24/7 AI Receptionist", "AI Answering Service"]
 
 META_DESCRIPTIONS = [
-    "Greetro answers {loc} business calls in 2 rings, 24/7, in 30+ languages — booking appointments, texting follow-ups, and transferring urgent calls. Free 14-day trial.",
-    "An AI receptionist for {loc} businesses: every call answered in 2 rings, day or night, in 30+ languages. Bookings, messages, SMS follow-ups. Try it free for 14 days.",
-    "Never miss a call in {loc} again. Greetro's AI receptionist answers 24/7 in 30+ languages, books into your calendar, and texts confirmations. 14-day free trial.",
-    "24/7 AI phone answering for {loc} clinics, firms, salons, and shops. Two-ring pickup, 30+ languages, calendar booking, SMS follow-ups. Start free — no card needed.",
+    "Greetro answers {loc} business calls in 2 rings, 24/7, in 30+ languages — booking appointments, texting follow-ups, and transferring urgent calls. Join the waitlist.",
+    "An AI receptionist for {loc} businesses: every call answered in 2 rings, day or night, in 30+ languages. Bookings, messages, SMS follow-ups. Now taking waitlist sign-ups.",
+    "Never miss a call in {loc} again. Greetro's AI receptionist answers 24/7 in 30+ languages, books into your calendar, and texts confirmations. Join the waitlist.",
+    "24/7 AI phone answering for {loc} clinics, firms, salons, and shops. Two-ring pickup, 30+ languages, calendar booking, SMS follow-ups. Join the early-access waitlist.",
 ]
 
 H1_PATTERNS = [
@@ -403,7 +404,7 @@ STATE_WHY = [
     "<p>{color} That&rsquo;s a lot of calls landing on front desks that are already stretched — or on nobody at all after close.</p>"
     "<p>Because Greetro is cloud-based, it serves every corner of {name} equally — {cities}, and every town in between. Keep your local number; Greetro answers it with your greeting, your rules, and your calendar.</p>",
     "<p>What does a missed call cost in {name}? For a clinic, a filled slot; for a firm, a signed client; for a shop, a repair order. {color}</p>"
-    "<p>Greetro answers for businesses across {name} — {cities} included — as a cloud service running on your existing number. Setup takes an afternoon, and the 14-day trial doesn&rsquo;t ask for a card.</p>",
+    "<p>Greetro answers for businesses across {name} — {cities} included — as a cloud service running on your existing number. Setup takes an afternoon once we open your region — join the waitlist and we&rsquo;ll tell you when that is.</p>",
 ]
 
 CITY_WHY = [
@@ -412,7 +413,7 @@ CITY_WHY = [
     "<p>Ask around {areas}: the phone rings hardest exactly when the chair, the exam room, or the job site needs you most. {color}</p>"
     "<p>Because Greetro runs in the cloud, it covers every part of {name} — and the rest of {state} — equally. Keep the number your customers already know; Greetro picks it up in two rings.</p>",
     "<p>{color} It&rsquo;s a market that rewards whoever answers first — and quietly punishes voicemail.</p>"
-    "<p>Greetro serves {name} businesses as a cloud service on your existing line — from {areas} — with nothing to install and a 14-day free trial that never asks for a card.</p>",
+    "<p>Greetro serves {name} businesses as a cloud service on your existing line — from {areas} — with nothing to install. We&rsquo;re opening access region by region, so join the waitlist to hear when {name} goes live.</p>",
     "<p>What&rsquo;s a missed call worth in {name}? A booked cleaning, a signed client, a scheduled repair, a showing that actually happens. {color}</p>"
     "<p>Across {areas}, Greetro answers on your existing number — cloud-based, live in an afternoon, and switched off again in one setting if you ever want it gone.</p>",
 ]
@@ -495,18 +496,18 @@ PRICING_LEADS = [
     "Simple monthly plans for {loc} businesses — a fraction of a receptionist&rsquo;s salary, live in an afternoon.",
     "Every plan answers 24/7 within two rings. Pick the size that fits your {loc} call volume.",
     "No contracts, no hardware, no setup fees — just a monthly plan sized to your {loc} line.",
-    "Start free for 14 days, no card required, and see exactly what Greetro catches on your {loc} line.",
+    "Planned launch pricing for {loc} businesses — nothing is on sale yet, and waitlist members hear the final numbers first.",
 ]
 
 CTA_VARIANTS = [
     ("Never miss another <span class=\"grad-text\">{loc} call</span>",
-     "Greetro is rolling out region by region. Join the waitlist and your {loc} business gets hands-on onboarding and a 14-day free trial — no card required."),
+     "Greetro is rolling out region by region and isn&rsquo;t open for sign-ups yet. Join the waitlist and we&rsquo;ll email your {loc} business the moment access opens — hands-on onboarding included."),
     ("Your {loc} line, <span class=\"grad-text\">answered from day one</span>",
-     "Join the waitlist to be first in line when your region opens. Every early {loc} business gets hands-on onboarding and 14 days free — no card required."),
+     "Join the waitlist to be first in line when your region opens. Every early {loc} business gets hands-on onboarding, and we&rsquo;ll tell you as soon as access is available."),
     ("Put your {loc} phones <span class=\"grad-text\">on autopilot</span>",
-     "Keep your number, keep your greeting, stop missing calls. Join the waitlist for hands-on onboarding and a 14-day free trial for your {loc} business."),
+     "Keep your number, keep your greeting, stop missing calls. Join the waitlist for hands-on onboarding, and we&rsquo;ll let your {loc} business know the moment we open your region."),
     ("The next {loc} caller <span class=\"grad-text\">gets answered</span>",
-     "Be first when your region opens: join the waitlist and start a 14-day free trial for your {loc} business — hands-on onboarding included, no card required."),
+     "Be first when your region opens: join the waitlist and we&rsquo;ll email your {loc} business as soon as access is available — hands-on onboarding included."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -582,7 +583,7 @@ def nav_html():
         <a href="/#use-cases">Who it&rsquo;s for</a>
         <a href="/#pricing">Pricing</a>
         <a href="/locations/">Locations</a>
-        <a class="btn btn-primary btn-sm nav-cta" href="/#waitlist">Start free trial</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/#waitlist">Join the waitlist</a>
       </div>
     </nav>
   </header>
@@ -609,6 +610,9 @@ def footer_html():
         <a href="/#faq">FAQ</a>
         <a href="/locations/">Locations</a>
         <a href="/#waitlist">Join the waitlist</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:leads@stylemarking.com">leads@stylemarking.com</a>
       </nav>
     </div>
     <div class="container footer-bottom">
@@ -620,6 +624,12 @@ def footer_html():
   <script src="../js/main.js" defer></script>
 </body>
 </html>
+"""
+
+
+ANALYTICS = """
+  <!-- Analytics: paste your GA4 Measurement ID below to activate. Until then this is a no-op. -->
+  <script>window.GA_ID="G-XXXXXXXXXX";if(window.GA_ID&&!/^G-X+$/.test(window.GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+window.GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',window.GA_ID);}</script>
 """
 
 
@@ -664,7 +674,7 @@ def head_html(title, description, canonical, jsonld):
   <script type="application/ld+json">
 """ + jsonld + """
   </script>
-</head>
+""" + ANALYTICS + """</head>
 <body>
 """
 
@@ -672,11 +682,14 @@ def head_html(title, description, canonical, jsonld):
 def offers_jsonld():
     return [
         {"@type": "Offer", "name": "Starter", "price": "49", "priceCurrency": "USD",
-         "description": "1 business number, 250 call minutes per month, 24/7 answering, appointment booking, full transcripts."},
+         "availability": "https://schema.org/PreOrder",
+         "description": "Planned launch pricing. 1 business number, 250 call minutes per month, 24/7 answering, appointment booking, full transcripts."},
         {"@type": "Offer", "name": "Pro", "price": "149", "priceCurrency": "USD",
-         "description": "3 business numbers, 1,000 call minutes per month, Google and Outlook calendar sync, 30+ languages, SMS follow-ups."},
+         "availability": "https://schema.org/PreOrder",
+         "description": "Planned launch pricing. 3 business numbers, 1,000 call minutes per month, Google and Outlook calendar sync, 30+ languages, SMS follow-ups."},
         {"@type": "Offer", "name": "Scale", "price": "399", "priceCurrency": "USD",
-         "description": "10 business numbers, 4,000 call minutes per month, CRM integrations and API, priority support."},
+         "availability": "https://schema.org/PreOrder",
+         "description": "Planned launch pricing. 10 business numbers, 4,000 call minutes per month, CRM integrations and API, priority support."},
     ]
 
 
@@ -726,10 +739,10 @@ SCALE_TAGS = [
     "Built for businesses with many doors.",
 ]
 PRICING_NOTES = [
-    "14-day free trial on every plan &middot; no card required &middot; cancel anytime",
-    "Every plan starts with 14 days free &middot; no card up front &middot; cancel anytime",
-    "Try any plan free for 14 days &middot; no card needed &middot; cancel whenever",
-    "All plans: 14-day free trial, no card required, cancel anytime",
+    "Planned pricing at launch &middot; nothing to buy yet &middot; waitlist members hear first",
+    "Planned launch pricing &middot; not yet on sale &middot; final pricing confirmed before access opens",
+    "Pricing planned for launch &middot; no checkout yet &middot; waitlist members are told first",
+    "Planned pricing &middot; Greetro is pre-launch &middot; we confirm final pricing before access opens",
 ]
 
 
@@ -745,7 +758,7 @@ def pricing_html(key):
             <li>24/7 answering within 2 rings</li>
             <li>Appointment booking</li>
           </ul>
-          <a class="btn btn-ghost btn-block" href="/#waitlist">Start free trial</a>
+          <a class="btn btn-ghost btn-block" href="/#waitlist">Join the waitlist</a>
         </article>
 
         <article class="price-card price-featured glass reveal delay-1">
@@ -759,7 +772,7 @@ def pricing_html(key):
             <li>Google &amp; Outlook calendar sync</li>
             <li>30+ languages &amp; SMS follow-ups</li>
           </ul>
-          <a class="btn btn-primary btn-block" href="/#waitlist">Start free trial</a>
+          <a class="btn btn-primary btn-block" href="/#waitlist">Join the waitlist</a>
         </article>
 
         <article class="price-card glass reveal delay-2">
@@ -772,7 +785,7 @@ def pricing_html(key):
             <li>CRM integrations + API</li>
             <li>Priority support</li>
           </ul>
-          <a class="btn btn-ghost btn-block" href="/#waitlist">Start free trial</a>
+          <a class="btn btn-ghost btn-block" href="/#waitlist">Join the waitlist</a>
         </article>
       </div>
 
@@ -828,7 +841,7 @@ def build_common_sections(key, loc_short, why_heading, why_html, links_heading, 
     parts.append(
         "    <section class=\"section container\" id=\"pricing-local\">\n"
         "      <div class=\"section-head reveal\">\n"
-        "        <p class=\"eyebrow\">Pricing</p>\n"
+        "        <p class=\"eyebrow\">Planned pricing at launch</p>\n"
         "        <h2>Plans that cost less than <span class=\"grad-text\">missed calls</span></h2>\n"
         "        <p class=\"section-sub\">" + pricing_lead + "</p>\n"
         "      </div>\n" + pricing_html(key) + "    </section>\n"
@@ -841,7 +854,7 @@ def build_common_sections(key, loc_short, why_heading, why_html, links_heading, 
         "          <h2>" + cta_h.format(loc=loc_short) + "</h2>\n"
         "          <p>" + cta_p.format(loc=loc_short) + "</p>\n"
         "          <div class=\"loc-ctas\">\n"
-        "            <a class=\"btn btn-primary\" href=\"/#waitlist\">Start your 14-day free trial</a>\n"
+        "            <a class=\"btn btn-primary\" href=\"/#waitlist\">Join the waitlist</a>\n"
         "            <a class=\"btn btn-ghost\" href=\"/#how\">See how it works</a>\n"
         "          </div>\n"
         "        </div>\n"
@@ -881,7 +894,7 @@ def build_hero(key, display, loc_short, breadcrumb_name):
         "        <h1 class=\"reveal delay-1\">" + h1 + "</h1>\n"
         "        <p class=\"section-sub reveal delay-2\">" + intro + "</p>\n"
         "        <div class=\"loc-ctas reveal delay-3\">\n"
-        "          <a class=\"btn btn-primary\" href=\"/#waitlist\">Start your 14-day free trial</a>\n"
+        "          <a class=\"btn btn-primary\" href=\"/#waitlist\">Join the waitlist</a>\n"
         "          <a class=\"btn btn-ghost\" href=\"/#pricing\">See pricing</a>\n"
         "        </div>\n"
         "        <ul class=\"loc-facts reveal delay-4\">\n"
@@ -970,7 +983,7 @@ def build_hub_page():
     canonical = DOMAIN + "/locations/"
     title = "AI Receptionist Locations — Greetro"
     description = ("Greetro's AI voice receptionist answers business calls 24/7 in 30+ languages across all 50 states. "
-                   "Find your state or metro and start a 14-day free trial — no card required.")
+                   "Find your state or metro and join the early-access waitlist.")
     graph = {
         "@context": "https://schema.org",
         "@graph": [
@@ -1012,7 +1025,7 @@ def build_hub_page():
         <h1 class="reveal delay-1">One receptionist, <span class="grad-text">every ZIP code</span></h1>
         <p class="section-sub reveal delay-2">Greetro is a cloud service — it answers any US business line, from Manhattan law firms to lake-country contractors. There&rsquo;s no local office to visit and nothing to install: forward your existing number, and Greetro picks up within two rings, 24/7, in 30+ languages. Pick your state or metro below to see how it fits your market.</p>
         <div class="loc-ctas reveal delay-3">
-          <a class="btn btn-primary" href="/#waitlist">Start your 14-day free trial</a>
+          <a class="btn btn-primary" href="/#waitlist">Join the waitlist</a>
           <a class="btn btn-ghost" href="/#pricing">See pricing</a>
         </div>
       </div>
@@ -1052,6 +1065,8 @@ def build_hub_page():
 
 def build_sitemap():
     entries = [(DOMAIN + "/", TODAY),
+               (DOMAIN + "/privacy", LEGAL_LASTMOD),
+               (DOMAIN + "/terms", LEGAL_LASTMOD),
                (DOMAIN + "/blog/", BLOG_LASTMOD)]
     entries += [(DOMAIN + "/blog/" + slug, BLOG_LASTMOD) for slug in BLOG_SLUGS]
     entries += [(DOMAIN + "/locations/", TODAY)]
