@@ -359,6 +359,27 @@ def _h(key, salt):
 def pick(key, salt, options):
     return options[_h(key, salt) % len(options)]
 
+def fit_pick(key, salt, options, lo, hi):
+    """Deterministically pick a rendered string whose length lands in [lo, hi].
+
+    Location names differ in length by 12+ characters, so a single fixed
+    template cannot keep every page inside Google's snippet window. Each
+    caller hands in a pool of already-rendered candidates; we keep the ones
+    that fit and hash-select from those, so pages stay varied, regenerable,
+    and unique (every candidate embeds the location name).
+    """
+    ok = [o for o in options if lo <= len(o) <= hi]
+    if ok:
+        return pick(key, salt, ok)
+    # Nothing fits: prefer the longest candidate that is still under the cap,
+    # otherwise the shortest overall. Never silently emit an over-long string.
+    under = [o for o in options if len(o) <= hi]
+    if under:
+        best = max(len(o) for o in under)
+        return pick(key, salt, [o for o in under if len(o) == best])
+    best = min(len(o) for o in options)
+    return pick(key, salt, [o for o in options if len(o) == best])
+
 def rotate(key, salt, items):
     k = _h(key, salt) % len(items)
     return items[k:] + items[:k]
@@ -373,14 +394,46 @@ def join_and(items):
 # ---------------------------------------------------------------------------
 
 TITLE_CONCEPTS = ["AI Receptionist", "AI Phone Receptionist",
-                  "24/7 AI Receptionist", "AI Answering Service"]
+                  "24/7 AI Receptionist", "AI Answering Service",
+                  "AI Virtual Receptionist"]
+
+# Short value clauses used to pad titles for short location names.
+TITLE_TAGS = ["Answered in 2 Rings", "Never Miss a Call", "24/7 Call Answering",
+              "Answers 24/7", "30+ Languages", "2-Ring Pickup",
+              "Every Call Answered", "24/7 Phone Answering"]
+
+TITLE_MIN, TITLE_MAX = 50, 60
+DESC_MIN, DESC_MAX = 140, 155
+
+
+def title_candidates(loc):
+    """Every candidate embeds `loc`, so titles stay unique across pages."""
+    out = []
+    for concept in TITLE_CONCEPTS:
+        out.append("%s in %s | Greetro" % (concept, loc))
+        out.append("%s for Businesses in %s | Greetro" % (concept, loc))
+        out.append("%s for Small Businesses in %s | Greetro" % (concept, loc))
+        for tag in TITLE_TAGS:
+            out.append("%s in %s — %s | Greetro" % (concept, loc, tag))
+    return out
+
 
 META_DESCRIPTIONS = [
-    "Greetro answers {loc} business calls in 2 rings, 24/7, in 30+ languages — booking appointments, texting follow-ups, and transferring urgent calls. Join the waitlist.",
-    "An AI receptionist for {loc} businesses: every call answered in 2 rings, day or night, in 30+ languages. Bookings, messages, SMS follow-ups. Now taking waitlist sign-ups.",
-    "Never miss a call in {loc} again. Greetro's AI receptionist answers 24/7 in 30+ languages, books into your calendar, and texts confirmations. Join the waitlist.",
-    "24/7 AI phone answering for {loc} clinics, firms, salons, and shops. Two-ring pickup, 30+ languages, calendar booking, SMS follow-ups. Join the early-access waitlist.",
+    "AI phone answering for {loc}: every call picked up in two rings, 24/7, in 30+ languages, with texted follow-ups. Join the Greetro waitlist.",
+    "Greetro is an AI receptionist for {loc} businesses. Every call answered in two rings, 24/7, in 30+ languages. Join the early-access waitlist.",
+    "Stop missing calls in {loc}. Greetro's AI receptionist answers 24/7 in 30+ languages, books appointments and texts confirmations. Waitlist open.",
+    "An AI receptionist for {loc} businesses: two-ring pickup around the clock, 30+ languages, calendar booking, SMS follow-ups. Join the waitlist.",
+    "24/7 AI phone answering for {loc} clinics, firms, salons and shops. Two-ring pickup, 30+ languages, appointment booking. Join the waitlist.",
+    "Greetro answers {loc} business calls in two rings, day or night, in 30+ languages — booking appointments and texting follow-ups. Waitlist open.",
+    "Every {loc} call answered in two rings, 24/7, in 30+ languages, with bookings, SMS follow-ups and urgent transfers. Join the Greetro waitlist.",
+    "AI receptionist for {loc} businesses. Two-ring pickup 24/7 in 30+ languages, appointments booked, follow-ups texted, urgent calls sent to a human.",
+    "Greetro's AI receptionist covers {loc} phones 24/7 in 30+ languages: two-ring pickup, calendar bookings, texted confirmations, call transcripts.",
+    "Never miss another {loc} call. Greetro answers in two rings, 24/7, in 30+ languages, books appointments and texts confirmations. Waitlist open.",
 ]
+
+
+def desc_candidates(loc):
+    return [d.format(loc=loc) for d in META_DESCRIPTIONS]
 
 H1_PATTERNS = [
     "An AI receptionist for <span class=\"grad-text\">{loc}</span> businesses",
@@ -915,9 +968,8 @@ def build_state_page(state):
     name, abbr, slug, cities, neighbors, color = state
     key = name
     canonical = DOMAIN + "/locations/" + slug
-    concept = pick(key, "title", TITLE_CONCEPTS)
-    title = concept + " in " + name + " — Greetro"
-    description = pick(key, "meta", META_DESCRIPTIONS).format(loc=name)
+    title = fit_pick(key, "title", title_candidates(name), TITLE_MIN, TITLE_MAX)
+    description = fit_pick(key, "meta", desc_candidates(name), DESC_MIN, DESC_MAX)
 
     jsonld = location_jsonld(
         name, canonical, description,
@@ -949,9 +1001,8 @@ def build_city_page(idx, city):
     display = name + ", " + st
     key = display
     canonical = DOMAIN + "/locations/" + slug
-    concept = pick(key, "title", TITLE_CONCEPTS)
-    title = concept + " in " + display + " — Greetro"
-    description = pick(key, "meta", META_DESCRIPTIONS).format(loc=display)
+    title = fit_pick(key, "title", title_candidates(display), TITLE_MIN, TITLE_MAX)
+    description = fit_pick(key, "meta", desc_candidates(display), DESC_MIN, DESC_MAX)
 
     jsonld = location_jsonld(
         display, canonical, description,
@@ -981,9 +1032,9 @@ def build_city_page(idx, city):
 
 def build_hub_page():
     canonical = DOMAIN + "/locations/"
-    title = "AI Receptionist Locations — Greetro"
-    description = ("Greetro's AI voice receptionist answers business calls 24/7 in 30+ languages across all 50 states. "
-                   "Find your state or metro and join the early-access waitlist.")
+    title = "AI Receptionist Locations in All 50 States | Greetro"
+    description = ("Greetro's AI receptionist answers business calls in two rings, 24/7, in 30+ languages, "
+                   "across all 50 states. Find your metro and join the waitlist.")
     graph = {
         "@context": "https://schema.org",
         "@graph": [
