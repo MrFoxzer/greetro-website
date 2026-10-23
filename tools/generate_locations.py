@@ -736,13 +736,13 @@ def offers_jsonld():
     return [
         {"@type": "Offer", "name": "Starter", "price": "49", "priceCurrency": "USD",
          "availability": "https://schema.org/PreOrder",
-         "description": "Planned launch pricing. 1 business number, 250 call minutes per month, 24/7 answering, appointment booking, full transcripts."},
+         "description": "Planned launch pricing. 1 business number, 120 call minutes per month ($0.45/min after), 24/7 answering, appointment booking, full transcripts."},
         {"@type": "Offer", "name": "Pro", "price": "149", "priceCurrency": "USD",
          "availability": "https://schema.org/PreOrder",
-         "description": "Planned launch pricing. 3 business numbers, 1,000 call minutes per month, Google and Outlook calendar sync, 30+ languages, SMS follow-ups."},
+         "description": "Planned launch pricing. 3 business numbers, 400 call minutes per month ($0.45/min after), Google and Outlook calendar sync, 30+ languages, SMS follow-ups."},
         {"@type": "Offer", "name": "Scale", "price": "399", "priceCurrency": "USD",
          "availability": "https://schema.org/PreOrder",
-         "description": "Planned launch pricing. 10 business numbers, 4,000 call minutes per month, CRM integrations and API, priority support."},
+         "description": "Planned launch pricing. 10 business numbers, 1,200 call minutes per month ($0.45/min after), CRM integrations and API, priority support."},
     ]
 
 
@@ -807,7 +807,8 @@ def pricing_html(key):
           <p class="price-tag">""" + pick(key, "tag-starter", STARTER_TAGS) + """</p>
           <ul class="price-features">
             <li>1 business number</li>
-            <li>250 call minutes / month</li>
+            <li>120 call minutes / month</li>
+            <li>$0.45/min after that</li>
             <li>24/7 answering within 2 rings</li>
             <li>Appointment booking</li>
           </ul>
@@ -821,7 +822,8 @@ def pricing_html(key):
           <p class="price-tag">""" + pick(key, "tag-pro", PRO_TAGS) + """</p>
           <ul class="price-features">
             <li>3 business numbers</li>
-            <li>1,000 call minutes / month</li>
+            <li>400 call minutes / month</li>
+            <li>$0.45/min after that</li>
             <li>Google &amp; Outlook calendar sync</li>
             <li>30+ languages &amp; SMS follow-ups</li>
           </ul>
@@ -834,7 +836,8 @@ def pricing_html(key):
           <p class="price-tag">""" + pick(key, "tag-scale", SCALE_TAGS) + """</p>
           <ul class="price-features">
             <li>10 business numbers</li>
-            <li>4,000 call minutes / month</li>
+            <li>1,200 call minutes / month</li>
+            <li>$0.45/min after that</li>
             <li>CRM integrations + API</li>
             <li>Priority support</li>
           </ul>
